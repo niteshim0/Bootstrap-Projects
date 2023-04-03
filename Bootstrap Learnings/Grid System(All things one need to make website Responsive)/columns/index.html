@@ -1,0 +1,57 @@
+<!-- Sum of the column containers should always be 12 if it exceeds then that col which exceeds will be move
+to the next line
+Breakpoint	Class infix	Dimensions
+Extra small	None	<576px
+Small	sm	≥576px
+Medium	md	≥768px
+Large	lg	≥992px
+Extra large	xl	≥1200px
+Extra extra large	xxl	≥1400px -->
+<!-- Whatever the screen size you specified it will be applied on all the larger ones than it if not specified for them
+and the smaller than it gets divided in col-12 every division -->
+<!--Inside the col if you want to divide it put row inside it -->
+<!-- auto is used to make the column size as same length as content-->
+<!--row-cols defines how many division are possible for single line-->
+<!-- if md ,sm or any such Breakpoint is added then theat style will be applied from that Breakpoint afterwards-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <style media="screen">
+      #red{
+        background-color : red;
+        height:500px;
+      }
+      #green{
+        background-color : aquamarine;
+        height : 200px;
+      }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container-fluid" id = "red">
+      <div class="row row-cols-auto" id="green">
+        <div class="col-lg-4 col-md-6 bg-primary text-white">col-4</div>
+        <div class="col-lg-6 col-md-3 bg-secondary text-white">col-6</div>
+        <div class="col-lg-2 col-md-3 bg-success text-white">col-3</div>
+      </div>
+    </div>
+    <div class="container-fluid" id = "red">
+      <div class="row" id="green">
+        <div class="col-lg-4  bg-primary text-white">col-4</div>
+        <div class="col-lg-8  bg-secondary text-white">
+          col-8(Heading)
+          <div class="row" id="green">
+            <div class="col-lg-4 bg-sucess">col-4</div>
+            <div class="col-auto bg-danger">col-6</div>
+            <div class="col-lg-2 bg-info">col-3</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+  </body>
+</html>
