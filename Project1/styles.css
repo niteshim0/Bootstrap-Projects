@@ -1,0 +1,5 @@
+.navbar-dark {
+    --bs-navbar-color: rgba(255, 255, 255, 1);
+    --bs-navbar-hover-color: rgba(255, 255, 255, 0.60);
+    font-weight: 450;
+  }
